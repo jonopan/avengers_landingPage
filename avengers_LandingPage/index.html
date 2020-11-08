@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Movie Landing Page Website</title>
+    <!-- <iframe src="./assets/video/endgame-portal.mp3?autoplay=1&loop=1&autopause=0" style="display:none" id="iframeAudio">
+    </iframe> -->
+
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/lightslider.css">
+    <script src="assets/js/jquery3.3.1.js"></script>
+    <script src="assets/js/lightslider.js"></script>
+</head>
+<body>
+
+<header>
+    <a href="#" class="logo"><img src="./assets/images/logo2.png" alt=""></a>
+    <div class="toggle"><img src="./assets/images/toggle.png"></div>
+</header>
+<!--MUSIC PLAYING ON BACKGROUND-->
+<audio autoplay loop hidden id="playAudio">
+    <source src="./assets/video/endgame-portal.mp3">
+</audio>
+<div class="banner">
+
+    <div class="content">
+        <h2>Whatever <span>it</span> takes</h2>
+        <p>
+        After half of all life is snapped away by Thanos, the Avengers are left scattered and divided. Now with a way to reverse
+        the damage, the Avengers and their allies must assemble once more and learn to put differences aside in order to work
+        together and set things right. Along the way, the Avengers realize that sacrifices must be made as they prepare for the
+        ultimate final showdown with Thanos, which will result in the heroes fighting the biggest battle they have ever faced.
+        </p>
+        <a href="#" class="play" onclick="toggle();"><i class="fa fa-play-circle"></i>Watch Trailer</a>
+        <div class="slide" id="slide"></div>
+        <ul class="sci">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </div>
+</div>
+<div class="trailer">
+    <video src="./assets/video/trailer.mp4" controls="true"></video>
+    <img src="./assets/images/close.png" class="close" onclick="toggle();">
+</div>
+
+<!--MOVIE -->
+<section class="movieUi">
+    <div class="movieGrid">
+        <div class="movieCard" >
+            <img src="./assets/images/1.jpg" alt="">
+            <div class="movie-info">
+                <h2>The Avengers <br>(2012)</h2>
+                <br>
+
+                <span>Directed By Joss Whedon</span>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.5/5</span>
+                </div>
+                <div class="tags">
+                    <span class="action">Action</span>
+                    <span class="scifi">Science Fiction</span>
+                </div>
+                <div class="content">
+                    <p>
+                        Earth's Mightiest Heroes stand as the planet's first line of defense against the most powerful threats in the universe.
+                        A group of remarkable individuals assembled to defeat Loki & Chitauri army.
+                    </p>
+                </div>
+                <div class="star">
+                    <h4>Cast</h4>
+                    <ul>
+                        <li><img src="./assets/images/cast/robert.jpg"></li>
+                        <li><img src="./assets/images/cast/chrisE.jpg"></li>
+                        <li><img src="./assets/images/cast/chrisH.jpg"></li>
+                        <li><img src="./assets/images/cast/mark.jpg"></li>
+                        <li><img src="./assets/images/cast/scarlett.jpg"></li>
+                        <li><img src="./assets/images/cast/jeremy.jpg"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="movieCard">
+            <img src="./assets/images/2.jpg" alt="">
+            <div class="movie-info">
+                <h2>Avengers: Age of Ultron <br>(2015)</h2>
+                <br>
+                <span>Directed By Joss Whedon</span>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.5/5</span>
+                </div>
+                <div class="tags">
+                    <span class="action">Action</span>
+                    <span class="scifi">Science Fiction</span>
+                </div>
+                <div class="content">
+                    <p>
+                        Tony Stark builds an artificial intelligence system named Ultron with the help of Bruce Banner. 
+                        When the sentient Ultron makes plans to wipe out the human race, the Avengers set out to stop him.
+                    </p>
+                </div>
+                <div class="star">
+                    <h4>Cast</h4>
+                    <ul>
+                        <li><img src="./assets/images/cast/robert.jpg"></li>
+                        <li><img src="./assets/images/cast/chrisE.jpg"></li>
+                        <li><img src="./assets/images/cast/chrisH.jpg"></li>
+                        <li><img src="./assets/images/cast/mark.jpg"></li>
+                        <li><img src="./assets/images/cast/scarlett.jpg"></li>
+                        <li><img src="./assets/images/cast/jeremy.jpg"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="movieCard">
+            <img src="./assets/images/3.jpg" alt="">
+            <div class="movie-info">
+                <h2>Avengers: Infinity War<br>(2018)</h2>
+                <br>
+                <span>Directed By Joss Whedon</span>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.5/5</span>
+                </div>
+                <div class="tags">
+                    <span class="action">Action</span>
+                    <span class="scifi">Science Fiction</span>
+                </div>
+                <div class="content">
+                    <p>
+                        The Avengers and the Guardians of the Galaxy attempt to prevent Thanos from collecting the six all-powerful Infinity
+                        Stones as part of his quest to kill half of all life in the universe.
+                    </p>
+                </div>
+                <div class="star">
+                    <h4>Cast</h4>
+                    <ul>
+                        <li><img src="./assets/images/cast/robert.jpg"></li>
+                        <li><img src="./assets/images/cast/chrisE.jpg"></li>
+                        <li><img src="./assets/images/cast/chrisH.jpg"></li>
+                        <li><img src="./assets/images/cast/mark.jpg"></li>
+                        <li><img src="./assets/images/cast/scarlett.jpg"></li>
+                        <li><img src="./assets/images/cast/jeremy.jpg"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="movieCard">
+            <img src="./assets/images/4.jpg" alt="">
+            <div class="movie-info">
+                <h2>Avengers: End Game<br> (2019)</h2>
+                <br>
+                <span>Directed By Joss Whedon</span>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hid den="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <span>5/5</span>
+                </div>
+                <div class="tags">
+                    <span class="action">Action</span>
+                    <span class="scifi">Science Fiction</span>
+                </div>
+                <div class="content">
+                    <p>
+                        After Thanos, an intergalactic warlord, disintegrates half of the universe, the Avengers 
+                        must reunite and assemble again to reinvigorate their trounced allies and restore balance.
+                    </p>
+                </div>
+                <div class="star">
+                    <h4>Cast</h4>
+                    <ul>
+                        <li><img src="./assets/images/cast/robert.jpg"></li>
+                        <li><img src="./assets/images/cast/chrisE.jpg"></li>
+                        <li><img src="./assets/images/cast/chrisH.jpg"></li>
+                        <li><img src="./assets/images/cast/mark.jpg"></li>
+                        <li><img src="./assets/images/cast/scarlett.jpg"></li>
+                        <li><img src="./assets/images/cast/jeremy.jpg"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="heroes">
+    <div class="heroes-container">
+        <!--carousel-->
+        <ul id="autoWidth" class="cs-hidden">
+            <!--1-->
+            <li class="item-a">
+                <!--slider-box-->
+                <div class="flipcard">
+                    <div class="heroes-box">
+                        <div class="flip-card-front">
+                            <img src="./assets/images/heroes/ironMan.jpg" class="model">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Iron Man</h1>
+                            <p>
+                                Genius billionaire playboy philanthropist, driven by a heart that is part machine, 
+                                Wears modular arc reactor-powered Iron Man armor, granting superhuman strength & durability, the ability to fly &
+                                project Repulsor blasts. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--2-->
+            <li class="item-a">
+                <!--slider-box-->
+                <div class="flipcard">
+                    <div class="heroes-box">
+                        <div class="flip-card-front">
+                            <img src="./assets/images/heroes/captainMarvel.jpg" class="model">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Captain Marvel</h1>
+                            <p>
+                                Near death, Carol Danvers was transformed into a powerful warrior for the Kree. Now, returning to Earth years later, she
+                                must remember her past in order to to prevent a full invasion by shapeshifting aliens, the Skrulls.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--3-->
+            <li class="item-a">
+                <!--slider-box-->
+                <div class="flipcard">
+                    <div class="heroes-box">
+                        <div class="flip-card-front">
+                            <img src="./assets/images/heroes/captainAmerica.jpg" class="model">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Captain America</h1>
+                            <p>
+                                A frail young man enhanced to the peak of human perfection by an experimental serum to aid the United States
+                                government's efforts in World War II. Near the end of the war, he was trapped in ice and survived in suspended animation
+                                until he was revived in modern times.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--4-->
+            <li class="item-a">
+                <!--slider-box-->
+                <div class="flipcard">
+                    <div class="heroes-box">
+                        <div class="flip-card-front">
+                            <img src="./assets/images/heroes/doctorStrange.jpg" class="model">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Dr. Strange</h1>
+                            <p>
+                                Strange is the Sorcerer Supreme, *the* best and most powerful mortal sorcerer in the Earth Dimension. Using a
+                                combination of mystical artifacts, sorcerous energy borrowed from benevolent mystical beings, and his own inborn power
+                                and discipline, he is able to manipulate Reality itself to suit his purposes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--5-->
+            <li class="item-a">
+                <!--slider-box-->
+                <div class="flipcard">
+                    <div class="heroes-box">
+                        <div class="flip-card-front">
+                            <img src="./assets/images/heroes/falcon.jpg" class="model">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Falcon</h1>
+                            <p>
+                                As the superhero Falcon, Wilson uses mechanical wings to fly, and has limited telepathic and empathic control over
+                                birds. Following Steve Rogers's retirement, Wilson becomes the newest Captain America in All-New Captain America #1
+                                (January 2015) and leader of the Avengers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="item-a">
+                <!--slider-box-->
+                <div class="flipcard">
+                    <div class="heroes-box">
+                        <div class="flip-card-front">
+                            <img src="./assets/images/heroes/hawkeye.jpg" class="model">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Hawkeye</h1>
+                            <p>
+                                An expert marksman and fighter, Clint Barton puts his talents to good use by working for S.H.I.E.L.D. as a special
+                                agent. The archer known as Hawkeye also boasts a strong moral compass that at times leads him astray from his direct
+                                orders.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="item-a">
+                <!--slider-box-->
+                <div class="flipcard">
+                    <div class="heroes-box">
+                        <div class="flip-card-front">
+                            <img src="./assets/images/heroes/hulk.jpg" class="model">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Hulk</h1>
+                            <p>
+                                Exposed to heavy doses of gamma radiation, scientist Bruce Banner transforms into the mean, green rage machine called
+                                the Hulk.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="item-a">
+                <!--slider-box-->
+                <div class="flipcard">
+                    <div class="heroes-box">
+                        <div class="flip-card-front">
+                            <img src="./assets/images/heroes/loki.jpg" class="model">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Loki</h1>
+                            <p>
+                                Prince of Asgard, Odinson, rightful heir of Jotunheim, and God of Mischief, is burdened with glorious purpose.His
+                                desire to be a king drives him to sow chaos in Asgard. In his lust for power, he extends his reach to Earth.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="item-a">
+                <!--slider-box-->
+                <div class="flipcard">
+                    <div class="heroes-box">
+                        <div class="flip-card-front">
+                            <img src="./assets/images/heroes/panther.jpg" class="model">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Black Panther</h1>
+                            <p>
+                                T'Challa, a member of the royal family of the fictional African country of Wakanda. After the death of his
+                                father, T'Challa claimed the throne and the role of Black Panther. He was exposed to a mystical herb that enhanced his
+                                strength and agility to near-superhuman levels.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="item-a">
+                <!--slider-box-->
+                <div class="flipcard">
+                    <div class="heroes-box">
+                        <div class="flip-card-front">
+                            <img src="./assets/images/heroes/quickSilver.jpg" class="model">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>QuickSilver</h1>
+                            <p>
+                                A mutant with the ability to think and move at superhuman speeds, and has enhanced agility and reflexes. He is able to
+                                run beyond speed of light, accomplishes feats such as creating cyclones out of pure speed, running up walls and above
+                                bodies of water.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="item-a">
+                <!--slider-box-->
+                <div class="flipcard">
+                    <div class="heroes-box">
+                        <div class="flip-card-front">
+                            <img src="./assets/images/heroes/scarletwitch.jpg" class="model">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Scarlet Witch</h1>
+                            <p>
+                                Possesses abilities to alter reality in unspecified ways and is a powerful sorceress.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="item-a">
+                <!--slider-box-->
+                <div class="flipcard">
+                    <div class="heroes-box">
+                        <div class="flip-card-front">
+                            <img src="./assets/images/heroes/Spidey.jpg" class="model">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Spider Man</h1>
+                            <p>
+                                Spider-like abilities including superhuman strength and the ability to cling to most surfaces. He is also extremely
+                                agile and has amazing reflexes. Spider-Man also has a “spider sense,” that warns him of impending danger. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="item-a">
+                <!--slider-box-->
+                <div class="flipcard">
+                    <div class="heroes-box">
+                        <div class="flip-card-front">
+                            <img src="./assets/images/heroes/thor.jpg" class="model">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Thor</h1>
+                            <p>
+                                The mighty Thor wields an enchanted Uru hammer, Mjolnir, and is master of thunder and lightning. Thor's Powers and
+                                Abilities: Superhuman strength, speed, endurance & resistance to injury. Member of the otherworldly & virtually immortal
+                                Asgardian race.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="item-a">
+                <!--slider-box-->
+                <div class="flipcard">
+                    <div class="heroes-box">
+                        <div class="flip-card-front">
+                            <img src="./assets/images/heroes/vision.jpg" class="model">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Vision</h1>
+                            <p>
+                                Being an artificial life-form/android of sorts, Vision has superhuman senses, superhuman stamina, reflexes, speed, agility, 
+                                strength (even without being at high density), superhuman analytical capabilities, and the ability to process information and make calculations with superhuman speed and accuracy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="item-a">
+                <!--slider-box-->
+                <div class="flipcard">
+                    <div class="heroes-box">
+                        <div class="flip-card-front">
+                            <img src="./assets/images/heroes/widow.jpg" class="model">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Black Widow</h1>
+                            <p>
+                                Russian agent trained as a spy, martial artist, and sniper, and outfitted with an arsenal of high-tech weaponry,including a pair of wrist-mounted energy weapons dubbed her "Widow's Bite".
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="item-a">
+                <!--slider-box-->
+                <div class="flipcard">
+                    <div class="heroes-box">
+                        <div class="flip-card-front">
+                            <img src="./assets/images/heroes/antman.jpg" class="model">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Ant Man</h1>
+                            <p>
+                                After discovering a chemical substance, which he called Pym Particles, that would allow the user to alter his size, he
+                                armed himself with a helmet that could control ants. After that, Pym would shrink down to the size of an insect to
+                                become the mystery-solving Ant-Man, solving crimes and stopping criminals.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="item-a">
+                <!--slider-box-->
+                <div class="flipcard">
+                    <div class="heroes-box">
+                        <div class="flip-card-front">
+                            <img src="./assets/images/heroes/bucky.jpg" class="model">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Bucky Barnes</h1>
+                            <p>
+                                Sebastian Stan as Bucky Barnes / Winter Soldier: Steve Rogers' childhood best friend who has re-emerged as an enhanced
+                                brainwashed assassin after supposedly being killed in action during World War II.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+                                                                        
+        </ul>
+        
+    </div>
+</section>
+<div class="footer">
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h1 class="logo-text"><span>Marvel</span> Studio</h1>
+            <p>
+                Marvel Studios, LLC (originally known as Marvel Films from 1993 to 1996) is an American film and television studio that
+                is a subsidiary of The Walt Disney Studios. Marvel Studios is known for the production of the Marvel Cinematic Universe
+                films, based on characters that appear in Marvel Comics publications.
+            </p>
+            <div class="contact">
+                <span><i class="fas fa-phone"></i> 123-456-789</span>
+                <span><i class="fas fa-envelope"></i> mcu@live.com.au</span>
+            </div>
+
+        </div>
+        <div class="footer-section links">
+        <h1 class="logo-text"><span>Useful</span> Links</h1>
+            <ul>
+                <li class="fa fa-chevron-right"><a href="#">Events</a></i></li>
+                <li class="fa fa-chevron-right"><a href="#">Producer/Director</a></i></li>
+                <li class="fa fa-chevron-right"><a href="#">Mentores</a></i></li>
+                <li class="fa fa-chevron-right"><a href="#">Casts</a></i></li>
+                <li class="fa fa-chevron-right"><a href="#">Movies</a></i></li>
+                <li class="fa fa-chevron-right"><a href="#">Galleries</a></i></li>
+                <li class="fa fa-chevron-right"><a href="#">Terms and Conditions</a></i></li>
+            </ul>
+        </div>
+
+        <div class="footer-section links">
+            <h1 class="logo-text"><span>Our</span> Services</h1>
+            <ul>
+                <li class="fa fa-chevron-right"><a href="#">Web Design</a></i></li>
+                <li class="fa fa-chevron-right"><a href="#">Music Orchestra</a></i></li>
+                <li class="fa fa-chevron-right"><a href="#">Product Management</a></i></li>
+                <li class="fa fa-chevron-right"><a href="#">Marketing</a></i></li>
+                <li class="fa fa-chevron-right"><a href="#">Graphic Design</a></i></li>
+                <li class="fa fa-chevron-right"><a href="#">Film Editing</a></i></li>
+            </ul>
+        </div>
+        <div class="footer-section contact-form">
+            <h1 class="logo-text"><span>Contact</span> Us</h1>
+            <form action="" method="post">
+                <div class="email">
+                    <input type="email" name="email" class="contact-input" placeholder="Your email address...">
+                </div>
+                <div class="msg">
+                    <textarea name="message" class="contact-input" placeholder="Your message..."></textarea>
+                </div>
+                <div class="btn">
+                    <button type="submit">Send <i class="fas fa-envelope"></i></button>
+                </div>                
+            </form>
+
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; codingmarvels.com | Designed by Marvel Studios
+    </div>
+</div>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

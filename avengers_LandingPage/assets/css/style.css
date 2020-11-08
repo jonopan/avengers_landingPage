@@ -1,0 +1,737 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 100px;
+  z-index: 1000;
+}
+
+header .logo {
+  max-width: 120px;
+}
+
+header .toggle {
+  max-width: 50px;
+  cursor: pointer;
+}
+
+header .logo img {
+  margin-left: 30px;
+  transform: scale(1.5);
+}
+header .logo img,
+header .toggle img {
+  max-width: 100%;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: url(../images/endgame2.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.banner .content {
+  max-width: 550px;
+}
+.banner .content a i {
+  transition: transform 0.5s ease-in;
+}
+
+.banner .content a i:hover {
+  transform: scale(1.1);
+}
+.banner .content h2 {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+  color: #ffffff;
+}
+
+.banner .content h2 span {
+  font-weight: 800;
+  color: rgb(141, 45, 231);
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff,
+      0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ffffff, 0 0 40px #fff, 0 0 50px #fff,
+      0 0 60px #fff, 0 0 70px #fff, 0 0 80px #fff;
+  }
+}
+.banner .content p {
+  font-size: 1.2em;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  z-index: 10000;
+  color: #ffffff;
+  margin: 15px 0 35px;
+}
+
+.play {
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+
+.play i {
+  margin-right: 10px;
+  max-width: 50px;
+  font-size: 50px;
+}
+
+.sci {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sci li {
+  list-style: none;
+}
+
+.sci li a {
+  text-decoration: none;
+}
+
+.sci li a i {
+  font-size: 30px;
+  line-height: 50px;
+  color: #ffffff;
+}
+
+.slide {
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 450px / 2);
+  max-width: 250px;
+  width: 100%;
+  height: 150px;
+  background: url(../images/endgame.jpg);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 20s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position: 150px 0;
+  }
+
+  100% {
+    background-position: -900px 0;
+  }
+}
+
+.trailer {
+  position: fixed;
+  top: 0;
+  transform: translate (-50%, -50%);
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.95);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.trailer.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.trailer video {
+  width: 1000px;
+  outline: none;
+}
+
+.trailer .close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  filter: invert(1);
+  max-width: 32px;
+}
+
+/*SECTION*/
+
+section {
+  scroll-snap-align: center;
+  position: relative;
+  background: url(../images/avengers.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*---------MOVIE TITLE---------------*/
+
+.movieUi:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.5;
+  background: url(../images/endgame.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.movieUi .title {
+  position: relative;
+  color: #ffffff;
+  z-index: 1;
+}
+
+section .movieGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  grid-gap: 20px;
+  height: 100%;
+  padding: 50px 30px;
+}
+
+section .movieGrid .movieCard {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+section .movieCard:before {
+  content: "";
+  position: absolute;
+  bottom: -245px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #000 45%, transparent);
+  transition: 0.5s;
+  z-index: 1;
+}
+section .movieCard:hover:before {
+  bottom: 0;
+}
+section .movieCard img {
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  align-items: center;
+  justify-content: center;
+}
+
+section .movieGrid .movieCard .movie-info {
+  position: absolute;
+  padding: 30px;
+  width: 100%;
+  height: 84%;
+  bottom: -240px;
+  left: 0;
+  box-sizing: border-box;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+section .movieGrid .movieCard:hover .movie-info {
+  bottom: 0;
+}
+
+section .movieGrid .movieCard .movie-info h2 {
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+section .movieGrid .movieCard .movie-info span {
+  font-size: 16px;
+  color: #ff7300;
+  font-weight: 500;
+}
+
+section .movieGrid .movieCard .movie-info .rating {
+  position: relative;
+  padding: 5px 0;
+}
+section .movieGrid .movieCard .movie-info .rating .fa,
+.fas {
+  color: #ff7300;
+  margin-right: 2px;
+  font-size: 16px;
+}
+
+section .movieGrid .movieCard .movie-info .rating span {
+  color: #ffffff;
+  padding: 0 5px;
+}
+
+section .movieGrid .movieCard .movie-info .tags {
+  position: relative;
+  margin-top: 5px;
+}
+
+section .movieGrid .movieCard .movie-info .tags span {
+  padding: 2px 0;
+  margin-right: 2px;
+}
+
+section .movieGrid .movieCard .movie-info .content {
+  color: #ffffff;
+}
+section .movieGrid .movieCard .movie-info .content p {
+  margin: 15px 0 10px;
+}
+
+section .movieGrid .movieCard .movie-info .star {
+  position: relative;
+}
+
+section .movieGrid .movieCard .movie-info .star h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  color: #ff7300;
+}
+
+section .movieGrid .movieCard .movie-info .star ul {
+  margin: 10px 0 0;
+  padding: 0;
+  display: flex;
+}
+
+section .movieGrid .movieCard .movie-info .star ul li {
+  list-style: none;
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 6px;
+  border: 1px solid #fff;
+}
+
+section .movieGrid .movieCard .movie-info .star ul li img {
+  width: 100%;
+}
+
+/*HEROES*/
+.heroes-container {
+  width: 100%;
+  height: 100%;
+  background: url(../images/avengers.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heroes-box {
+  max-width: 300px;
+  max-height: 465px;
+
+  /*Transition*/
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.heroes-box .model {
+  width: 300px;
+  height: 465px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/*FLIP CARD*/
+.flipcard {
+  width: 300px;
+  height: 465px;
+  perspective: 1000px;
+  margin: 30px 12.6px 30px 13.8px;
+}
+
+.flipcard:hover .heroes-box {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.heroes-box .flip-card-back {
+  padding: 30px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 300px;
+  transform: rotateY(180deg);
+  background-color: #2c2c2c;
+  opacity: 0.9;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+}
+
+.heroes-box .flip-card-back h1 {
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  max-height: 100px;
+  height: 100%;
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 990px) {
+  header {
+    padding: 20px 50px;
+  }
+  header .logo {
+    max-width: 80px;
+  }
+  header .toggle {
+    max-width: 40px;
+  }
+  .banner {
+    padding: 100px 50px;
+  }
+  .banner .content h2 {
+    font-weight: 400;
+    font-size: 2em;
+    letter-spacing: 0.05em;
+  }
+  .banner .content p {
+    font-size: 1em;
+  }
+
+  .slide {
+    position: relative;
+    bottom: initial;
+    left: 0;
+    width: 250px;
+    height: 150px;
+    margin: 20px 0;
+  }
+
+  .sci {
+    position: absolute;
+    top: initial;
+    right: initial;
+    margin-top: 40px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .sci li {
+    list-style: none;
+    margin: 0 5px;
+  }
+
+  .trailer video {
+    width: 95%;
+  }
+
+  section .screen-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  section .screen-box .screen:nth-child(1),
+  section .screen-box .screen:nth-child(2),
+  section .screen-box .screen:nth-child(3),
+  section .screen-box .screen:nth-child(4),
+  section .screen-box .screen:nth-child(5),
+  section .screen-box .screen:nth-child(6) {
+    margin-bottom: 5px;
+    flex-direction: column;
+    background-position: center -20px;
+  }
+
+  section .screen-box .screen {
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  section .screen-box .screen .content {
+    position: relative;
+  }
+}
+
+/*FOOTER*/
+.footer {
+  background-color: #303036;
+  color: #d3d3d3;
+  height: 100%;
+  position: relative;
+}
+
+.footer .footer-content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.footer .footer-content .footer-section {
+  flex: 1;
+  height: 100%;
+  padding: 25px;
+}
+
+.footer .footer-bottom {
+  background: #3c4146;
+  color: #858383;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+  width: 100%;
+}
+
+.footer .footer-content h1 {
+  color: #ffffff;
+  padding-bottom: 10px;
+}
+
+.footer .footer-content h1 span {
+  color: #d01d3f;
+}
+
+.footer .footer-content .about .contact span {
+  display: block;
+  margin: 8px 0;
+}
+
+.footer .footer-content .about .contact span i {
+  color: #ffffff;
+}
+
+.footer .footer-content .links ul li {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #d01d3f;
+  text-decoration: none;
+}
+
+.footer .footer-content .links ul li a {
+  color: #ffffff;
+  padding-left: 20px;
+  text-decoration: none;
+}
+
+.footer .footer-content .links ul a:hover {
+  color: #d01d3f;
+  transition: all 0.3s;
+}
+
+.footer .footer-content .contact-form .email,
+.footer .footer-content .contact-form .msg,
+.footer .footer-content .contact-form .btn {
+  padding-bottom: 20px;
+}
+
+.footer .footer-content .contact-form .contact-input {
+  width: 300px;
+  border-radius: 10px;
+  height: 40px;
+  padding: 5px;
+  font-size: 15px;
+  border: none;
+}
+
+.footer .footer-content .contact-form .contact-input:focus {
+  background: #1a1a1a;
+  color: #ffff;
+  outline: none;
+}
+
+.footer .footer-content .contact-form .msg textarea {
+  height: 100px;
+}
+
+.footer .footer-content .contact-form .btn button {
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  background: #d01d3f;
+  color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  width: auto;
+}
+.footer .footer-content .contact-form .btn button i {
+  color: #ffffff;
+  padding-left: 5px;
+  font-size: 15px;
+}
+
+.footer .footer-content .contact-form .btn button:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+.footer .footer-content .contact-form .socials a {
+  color: rgb(128, 128, 128);
+  border: 1px solid rgb(128, 128, 128);
+  width: 45px;
+  height: 41px;
+  padding-top: 5px;
+  margin-right: 5px;
+  text-align: center;
+  justify-content: center;
+  display: inline-block;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.footer .footer-content .contact-form .socials a:hover {
+  border: 1px solid #d01d3f;
+  color: #d01d3f;
+  transition: all 0.5s;
+}
+
+/*MOVIE GRID*/
+@media (max-width: 400px) {
+  section .movieGrid .movieCard .movie-info {
+    padding: 5px 10px;
+    margin: 0;
+  }
+  section .movieGrid .movieCard .movie-info h2 {
+    font-size: 13px;
+    padding: 0;
+  }
+
+  section .movieGrid .movieCard .movie-info span {
+    font-size: 7px;
+    color: #ff7300;
+  }
+
+  section .movieGrid .movieCard .movie-info .rating .fa,
+  .fas {
+    font-size: 6px;
+    margin: 0;
+  }
+
+  section .movieGrid .movieCard .movie-info .rating span {
+    display: inline-block;
+    font-size: 6px;
+  }
+
+  section .movieGrid .movieCard .movie-info .tags,
+  section .movieGrid .movieCard .movie-info .tags span,
+  section .movieGrid .movieCard .movie-info .content,
+  section .movieGrid .movieCard .movie-info .content p,
+  section .movieGrid .movieCard .movie-info .star,
+  section .movieGrid .movieCard .movie-info .star h4,
+  section .movieGrid .movieCard .movie-info .star ul,
+  section .movieGrid .movieCard .movie-info .star ul li,
+  section .movieGrid .movieCard .movie-info .star ul li img {
+    display: none;
+  }
+
+  .flipcard {
+    background-color: transparent;
+    margin-left: 30px;
+    transform: scale(0.8);
+  }
+  .footer .footer-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 1125px) {
+  section .movieGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section .movieGrid .movieCard {
+    left: 10%;
+    width: 75%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  section .movieGrid .movieCard .movie-info {
+    height: 70%;
+  }
+
+  section .movieGrid .movieCard .movie-info .tags,
+  section .movieGrid .movieCard .movie-info .tags span,
+  section .movieGrid .movieCard .movie-info .content,
+  section .movieGrid .movieCard .movie-info .content p,
+  section .movieGrid .movieCard .movie-info .star,
+  section .movieGrid .movieCard .movie-info .star h4,
+  section .movieGrid .movieCard .movie-info .star ul,
+  section .movieGrid .movieCard .movie-info .star ul li,
+  section .movieGrid .movieCard .movie-info .star ul li img {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .flipcard {
+    transform: scale(0.8);
+    margin: 20px 5.5px 0 6.7px;
+  }
+}
